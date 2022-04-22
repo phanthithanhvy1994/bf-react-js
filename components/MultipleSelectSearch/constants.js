@@ -1,0 +1,5 @@
+const TIMEOUT_DEFAULT = 1000
+
+export {
+  TIMEOUT_DEFAULT
+}

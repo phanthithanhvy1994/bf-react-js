@@ -1,0 +1,35 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.wrapper-pagination {
+  text-align: center;
+  padding: 30px 0;
+
+  .ui.pagination.menu {
+    box-shadow: none;
+    border: none;
+    background-color: transparent;
+
+    .item {
+      font-size: 14px;
+      font-weight: 400;
+      height: 32px;
+      min-width: 32px;
+      padding: 10px;
+
+      &:hover {
+        background: $pagingBtn_bgColor_hover;
+      }
+
+      &::before {
+        background: none;
+        width: 3px;
+      }
+
+      &.active {
+        background-color: $celulean_blue;
+        color: $white;
+        padding-top: 10px;
+      }
+    }
+  }
+}

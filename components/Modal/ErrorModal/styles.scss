@@ -1,0 +1,50 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.tiny.modal.error-modal {
+  width: 500px;
+  margin: 0;
+}
+
+.ui.modal.error-modal{
+  font-family: $default_fontFamily;
+  & >.header {
+    font-size: 18px;
+    border-bottom: unset;
+    line-height: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 48px;
+    padding-bottom: 3px;
+    font-weight: normal;
+    color:$default_color
+  }
+  & >.content {
+    font-size: 14px;
+    border-bottom: unset;
+    line-height: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    color:$default_color
+  }
+  & >.actions {
+    border-top: unset;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 80px;
+    background: unset;
+  }
+  .closeBtn{
+    color: $secondary_btn;
+    background-color: unset;
+    font-weight: normal;
+  }
+  & .closeBtn{
+    border: 1px solid $secondary_btn;
+    margin-right: 20px;
+  }
+  & .closeBtn:hover{
+    color: $secondary_btn_hover;
+    background-color: $secondary_btn_bg_hover;
+    font-weight: normal;
+  }
+}

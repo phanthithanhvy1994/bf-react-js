@@ -1,0 +1,25 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui-components {
+    padding: 1rem;
+
+    .ui-component {
+        border-bottom: 1px solid $black;
+        margin-bottom: 0.5rem;
+        padding-left: 1rem;
+
+        > div {
+            margin-bottom: 16px;
+        }
+
+        .title {
+            margin-left: -1rem;
+            color: $light_green !important;
+        }
+
+        .wrapper-loader {
+            position: static;
+            margin: 0;
+        }
+    }
+}

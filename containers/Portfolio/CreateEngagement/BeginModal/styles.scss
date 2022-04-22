@@ -1,0 +1,106 @@
+  @import 'src/assets/scss/stylesConfig.scss';
+
+  .ui.dimmer {
+    background-color: $bg_dimer;
+  }
+
+  .ui.modal.begin-modal {
+      width: 430px;
+      padding: 50px;
+      box-shadow: 2px 2px 3px $modal_boxshadow;
+      border-radius: 2px;
+      font-family: $default_fontFamily;
+      .ui.form input {
+        font-family: $default_fontFamily;
+      }
+      .ec-content-wrapper {
+        .ec-content {
+          .ec-input {
+            margin-bottom: 25px;
+            .message {
+              margin: 0;
+            }
+            .form-control {
+              width: 100%;
+            }
+            label {
+              display: block;
+              margin-bottom: 20px;
+            }
+            .react-datepicker-wrapper {
+              width: 100%;
+              .ui.input {
+                  width: 100%;
+              }
+            }            
+          }
+          .ec-title {
+            label {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 24px;
+              &.label--zambezi {
+                font-size: 16px;
+                color: $zambezi;
+              }
+            }
+          }
+        }
+      }
+      .ui.buttons {
+        margin-top: 50px;
+        display: flex;
+        .button-group-side {
+          width: 50%;
+          word-break: break-word;
+        }
+        .ui.button {
+          font-family: $default_fontFamily;
+          height: 40px;
+          padding: 6px 24px;
+          font-weight: normal;
+          &.btn--cancel {
+            float: left;
+            border-left: 1px solid;
+          }
+          &.btn--begin {
+            float: right;
+            border-left: 1px solid;
+          }
+        }
+      }
+    }
+
+.ui.modal.error {
+  width: 500px;  
+  padding: 50px;
+  box-shadow: 2px 2px 3px $modal_boxshadow;
+  border-radius: 2px;
+  font-family: $default_fontFamily;
+  > label {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .content {
+    margin-top: 20px;
+    line-height: 1.5;
+    padding: unset;
+  }
+  .ui.button {
+    margin: 50px 0 0 0;
+    &.btn--close {
+      float: left;
+    }
+  }
+}
+
+.ui.popup {
+  font-family: $default_fontFamily;
+}
+
+.ui.popup.transition.visible {
+  background: $whisper;
+  border-radius: 4px;
+  box-shadow: $elevation_2_2_3;
+}

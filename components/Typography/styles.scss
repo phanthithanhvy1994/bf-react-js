@@ -1,0 +1,139 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.typo-default {
+  margin: unset;
+  font-family: $default_fontFamily;
+  font-size: 14px;
+  font-weight: $fontWeight_regular;
+  line-height: 24px;
+  font-style: normal;
+  color: $typo_color_default;
+}
+
+//define css for the new Typography
+//ex: .typo-{nameofTyography}
+.typo-title1 {
+  @extend .typo-default;
+  font-size: 56px;
+  font-weight: $fontWeight_light;
+  line-height: 64px;
+}
+
+.typo-title2 {
+  @extend .typo-default;
+  font-size: 48px;
+  font-weight: $fontWeight_light;
+  line-height: 56px;
+}
+
+.typo-heading1 {
+  @extend .typo-default;
+  font-size: 32px;
+  font-weight: $fontWeight_light;
+  line-height: 48px;
+}
+
+.typo-heading2 {
+  @extend .typo-default;
+  font-size: 24px;
+  font-weight: $fontWeight_light;
+  line-height: 40px;
+}
+
+.typo-subheading1 {
+  @extend .typo-default;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.typo-subheading2 {
+  @extend .typo-default;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.typo-bodycopyregular {
+  @extend .typo-default;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.typo-bodycopysmall {
+  @extend .typo-default;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.typo-commonhelpertext {
+  @extend .typo-default;
+  font-family: $secondary_fontFamily;
+  font-size: 12px;
+  line-height: 14.06px;
+  color: $typo_color_commonHelperText;
+}
+
+.typo-commontext {
+  @extend .typo-default;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: $typo_color_commonText;
+}
+
+.typo-panelsubhead {
+  @extend .typo-default;
+  font-size: 16px;
+  line-height: 24px;
+  color: $typo_color_panelSubHead;
+}
+
+.typo-bodynew {
+  @extend .typo-default;
+  font-size: 14px;
+  line-height: 23px;
+  color: $typo_color_bodyNew;
+}
+
+.typo-placeholder {
+  @extend .typo-default;
+  font-family: $secondary_fontFamily;
+  font-size: 14px;
+  line-height: 16.41px;
+  color: $typo_color_placeholder;
+}
+
+.typo-fieldlabels {
+  @extend .typo-default;
+  font-weight: $fontWeight_semiBold;
+  font-size: 10px;
+  line-height: 12px;
+  color: $typo_color_fieldlabels;
+}
+
+.typo-label {
+  @extend .typo-default;
+  font-weight: $fontWeight_semiBold;
+  font-size: 14px;
+  line-height: 24px;
+  color: $typo_color_label;
+}
+
+.typo-content2body {
+  @extend .typo-default;
+  font-size: 14px;
+  line-height: 24px;
+  color: $typo_color_content2body;
+}
+
+.typo-textlink {
+  @extend .typo-default;
+  font-size: 14px;
+  line-height: 24px;
+  color: $typo_color_textlink;
+}
+
+.typo-hyperlinks {
+  @extend .typo-default;
+  font-size: 14px;
+  line-height: 24px;
+  color: $typo_color_hyperlinks;
+}

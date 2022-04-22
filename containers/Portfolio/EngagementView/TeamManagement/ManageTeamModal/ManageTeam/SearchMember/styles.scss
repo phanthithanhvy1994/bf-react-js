@@ -1,0 +1,112 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.search-member {
+    position: relative;
+    .ui.input.disabled input {
+        background-color: $whisper;
+        color: $shuttle_grey;
+        opacity: initial;
+    }
+    .ui .icon input,
+    .ui .icon input:focus {
+        border-radius: 4px;
+        border: 1px solid $celeste;
+        background: $white;
+        box-shadow: unset;
+    }
+    .ui.icon.input {
+        input::placeholder {
+            color: $shuttle_grey !important;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 32px;
+        }
+    }
+    .ui.search {
+        &.active i.icon {
+            opacity: 0.5;
+            color: initial;
+            transform: none;
+        }
+        .prompt {
+            height: 56px;
+        }
+        &.visible::before {
+            display: none;
+        }
+        .results {
+            background: $white;
+            border: 1px solid $celeste;
+            margin-top: 0;
+            .result-item {
+                font-family: $default_fontFamily;
+                [class^='result-item__'] {
+                    font-size: 12px;
+                    color: $raven;
+                }
+                .result-item__title {
+                    font-size: 14px;
+                    color: $black;
+                    margin-bottom: 5px;
+                }
+                .result-item__no-result {
+                    font-size: 12px;
+                    color: $brick_red;
+                    margin-bottom: 5px;
+                }
+            }
+            .message .description {
+                font-size: 12px;
+            }
+            .active.result {
+                background: none;
+            }
+        }
+        .results.transition.visible {
+            max-height: 415px;
+            overflow: auto;
+        }
+    }
+    .searching {
+        input {
+            cursor: wait;
+        }
+        .search-icon {
+            cursor: not-allowed;
+        }
+    }
+    .input-pale-blue {
+        input[type='text'],
+        input[type='text']:focus {
+            background: $pale_blue;
+            border-radius: 4px;
+            border: 1px solid $celeste;
+            box-shadow: unset;
+        }
+    }
+    & > .common {
+        position: absolute;
+        width: 100%;
+        background: $white;
+        border: 1px solid $celeste;
+        margin-top: 0;
+        border-radius: 2px;
+        box-shadow: $timezone_menu_boxshadow;
+        padding: 8px 18px;
+        z-index: 1;
+        .error {
+            margin-top: .25rem;
+            font-size: 12px;
+            color: $raven;
+        }
+    }
+    .search-icon {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background-image: url("src/assets/icons/svgs/teammember_search_icon.svg");
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+    }
+}

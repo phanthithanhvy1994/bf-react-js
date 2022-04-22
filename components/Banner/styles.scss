@@ -1,0 +1,60 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.banner-wrapper {
+  width: 620px;
+  height: 40px;
+  box-shadow: inset 0px -1px 0px $banner_box_shadown;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  .banner-icon {
+    .ui.image {
+      width: 18px;
+      height: 18px;
+      margin-right: 9px;
+    }
+  }
+  .banner-text {
+    flex: 1;
+    font-family: $default_fontFamily;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    line-height: 19px;
+    color: $black;
+  }
+  .banner-close {
+    width: 14px;
+    height: 14px;
+  }
+  &.success {
+    background: linear-gradient(0deg, $banner_bg_success, $banner_bg_success), linear-gradient(0deg, $white, $white);
+  }
+  &.information {
+    background: linear-gradient(0deg, $banner_bg_information, $banner_bg_information), linear-gradient(0deg, $white, $white);
+  }
+  &.guidance {
+    background: linear-gradient(0deg, $banner_bg_guidance, $banner_bg_guidance), linear-gradient(0deg, $white, $white);
+  }
+  &.warning {
+    background: linear-gradient(0deg, $banner_bg_warning, $banner_bg_warning), linear-gradient(0deg, $white, $white);
+  }
+  &.error {
+    background: linear-gradient(0deg, $banner_bg_error, $banner_bg_error), linear-gradient(0deg, $white, $white);
+  }
+  &.width-content {
+    width: fit-content !important;
+  }
+  &.height-content {
+    height: auto;
+    line-height: 23px;
+  }
+  &.padding-content {
+    padding: 15px;
+  }
+  &.box-shadow-none {
+    box-shadow: none;
+  }
+}

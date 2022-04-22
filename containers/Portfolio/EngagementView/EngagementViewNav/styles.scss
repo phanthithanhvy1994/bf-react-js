@@ -1,0 +1,48 @@
+@import "src/assets/scss/stylesConfig.scss";
+
+.detail__container {  
+  .grid {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: $min_width_computer) and (max-width: $max_width_largeMonitor) {
+  .header-detail {
+    .ui.tabular.menu .item.header-bf__item-profile {
+      padding-right: 0;
+    }
+  }
+  .main-bf {
+    .detail__container {
+      width: 100%;
+      .authorization__container,
+      .list-of-authorization__container,
+      .team-member__container,
+      .main__container,
+      .list-of-team-member__container {
+        width: 100%;
+        .width.grid {
+          margin: auto 9.6em auto 9.2em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $max_width_largeMonitor) {
+  .main-bf {
+    .detail__container {
+      width: 100%;
+      .authorization__container,
+      .list-of-authorization__container,
+      .team-member__container,
+      .main__container,
+      .list-of-team-member__container {
+        width: 100%;
+        .width.grid {
+          margin: auto 9.6em auto 9.2em;
+        }
+      }
+    }
+  }
+}

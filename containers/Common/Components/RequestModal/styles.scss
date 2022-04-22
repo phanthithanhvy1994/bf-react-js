@@ -1,0 +1,156 @@
+@import 'src/assets/scss/stylesConfig.scss';
+@import 'src/containers/Portfolio/EngagementView/GroupNameDataAuthorization/ViewResendBDARequest/styles.scss';
+
+$modalWidth: 492px;
+
+.request-modal {
+  position: fixed;
+  top: 115px;
+  right: 0;
+  bottom: 0;
+  background: $white;
+  z-index: 200;
+  width: $modalWidth;
+
+  &__header {
+    height: 93px;
+    background: $chathams_blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 0 0;
+    position: relative;
+
+    .close-btn {
+      cursor: pointer;
+      color: $white;
+      top: 25px;
+      right: 27px;
+      position: absolute;
+      padding: 2px;
+    }
+
+    .group {
+      flex-grow: 1;
+      display: inline-flex;
+      flex-direction: row;
+      font-size: 16px;
+
+      .ui.secondary.pointing.menu .item {
+        color: $white;
+        font-size: 16px;
+        line-height: 24px;
+        border-width: 0 0 5px 0;
+        font-weight: 300;
+        &.active {
+          color: $white;
+          border-color: $limerick;
+          font-weight: 400;
+        }
+        &.single-item{
+          font-size: 20px;
+          line-height: 32px;
+          font-weight: 400;
+          font-family: 'Open Sans';
+          padding: 7px 261px 14px 46px;
+          border: 0;
+          span {
+            width: 185px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    height: calc(100% - 110px);
+    padding: 65px 45px;
+    overflow: auto;
+    .wrapper-input {
+      .ui.input > input {
+        color: $shuttle_grey;
+        padding-right: 0;
+      }
+    }
+    .wrapper-dropdown {
+      .ui.selection.dropdown {
+        color: $shuttle_grey;
+      }
+    }
+    .form-buttons {
+      margin-top: 30px;
+      .secondary-btn {
+        float: left;
+        width: 100px;
+      }
+      .primary-btn {
+        float: right;
+        width: 83px;
+      }
+    }
+
+    .financial-institutions-title {
+      font-family: $default_fontFamily;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      color: $blue;
+      margin-bottom: 24px;
+      font-family: $default_fontFamily;
+    }
+
+    .view-client-info,
+    .create-schedule-task {
+      &__title {
+        font-weight: 300;
+        font-size: 18px;
+        color: $blue;
+        margin-bottom: 32px;
+        font-family: $default_fontFamily;
+      }
+
+      &__input {
+        margin-bottom: 32px;
+
+        label {
+          display: block;
+          font-size: 18px;
+          color: $black;
+          margin-bottom: 16px;
+        }
+      }
+
+      .form-control {
+        width: 400px;
+        height: 48px;
+      }
+    }
+  }
+}
+
+.request-modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 199;
+}
+
+.ui.tiny.modal.confirm-modal {
+  &.invalid-email-modal {
+    width: 450px;
+    height: 263px;
+    .content {
+      max-width: 315px;
+    }
+  }
+}
+
+.ui.modal {
+  &.request-deleted {
+    height: 196px;
+  }
+}

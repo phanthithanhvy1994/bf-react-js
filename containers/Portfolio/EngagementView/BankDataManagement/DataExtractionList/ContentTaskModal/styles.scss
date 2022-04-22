@@ -1,0 +1,74 @@
+@import 'src/assets/scss/stylesConfig.scss';
+.request-modal__content {
+    .create-schedule-task {
+        &__input {
+            .wrapper-input .input {
+                &.disabled {
+                    opacity: unset;
+                    input {
+                        border: 1px solid $silver;
+                        background-color: $whisper;
+                    }
+                } 
+                input {
+                    font-size: 14px;
+                    line-height: 16px;
+                    padding: 15px 16px;
+                    border: 1px solid $silver;
+                }
+            }
+            &--custom-content {
+                .ui.button {
+                    width: 100%;
+                    text-align: left;
+                    background: $whisper;
+                    border: 1px solid $silver;
+                    border-radius: 4px;
+                    color: $shuttle_grey;
+                    font-family: $default_fontFamily;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    padding: 15px 16px;
+                    opacity: unset !important;
+                }
+            }
+        }
+        .form-buttons {
+            .ui.button {
+                padding-top: 9px;
+                padding-left: 20px;
+                opacity: unset !important;
+            }
+            .primary-btn.ui.button {
+                width: 80px;
+            }
+            .secondary-btn.ui.button {
+                width: 100px;
+            }
+        }
+        .task-blocked-message {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            margin: -25px 6px 34px 0;
+            background-color: $light_pink;
+            box-shadow: inset 0px -1px 0px $paler_pink;
+            .task-blocked-message-icon {
+                padding: 14px 0 0 21px;
+            }
+            .task-blocked-message-content {
+                padding: 9px 16px 9px 9px;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.expiry-warning-message.ui.modal {
+    .button, .header {
+        font-family: $default_fontFamily;
+    }
+}

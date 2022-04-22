@@ -1,0 +1,95 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.team-member-page {
+  .ui.grid>.column:not(.row) {
+    padding-top: 0px;
+  } 
+  .team-member {
+    & .ui.grid > .team-member__row.row {
+      padding: 0px;
+      &.btn {
+        padding: 16px 0 0 0;
+      }
+    }
+    & .team-member__container {
+      padding: 40px 0;
+      & h1.ui.header {
+        font-family: $secondary_fontFamily;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 48px;
+        color: $black;
+      }
+      & button.btn--manage-team {
+        font-size: 16px;
+        font-weight: 400;
+        height: 48px;
+      }
+    }
+  }
+
+  .message-success {
+    padding: 24px;
+    margin-top: 40px;
+    background: $clear_day;
+    box-shadow: 0px 0px 0px 1px $chateau_green;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    & img {
+      float: left;
+      padding-right: 20px;
+    }
+  }
+  .list-of-team-member {
+    .ui.table {
+      border: 1px solid $blue;
+      box-shadow: $team_table_boxshadow;
+      border-radius: unset;
+      thead,
+      tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+      }
+      thead {
+        th {
+          padding-left: 40px;
+        }
+      }
+      tbody {
+        display: block;
+        max-height: 570px;
+        overflow: auto;
+        tr:last-child {
+          td {
+            border-bottom: none;
+          }
+        }
+        td {
+          font-size: 12px;
+          line-height: 20px;
+          font-weight: 400;
+          font-style: normal;
+          font-family: $default_fontFamily;
+          color: $black;
+          padding: 16px 0 16px 40px;
+          border-bottom: 1px solid $celeste;
+          border-top: none;
+          &.disabledRow {
+            color: $celeste;
+            border-bottom: 1px solid $whisper;
+          }
+          &:last-child {
+            border-right: none;
+          }
+          &:first-child {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+}

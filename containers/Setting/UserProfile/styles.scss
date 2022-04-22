@@ -1,0 +1,90 @@
+@import 'src/assets/scss/stylesConfig.scss';
+.user-settings {
+    padding: 0 0 64px;
+    &__profile--div {
+        padding-top: 24px;
+        & h1.ui.header {
+            font-size: 32px;
+            color: $text_header;
+            font-weight: 300;
+            font-family: $default_fontFamily;
+        }
+    }
+    &__information {
+        margin: 24px auto 0;
+        max-width: 596px;
+        .primary-card__header {
+            h3 {
+                font-size: 20px;
+                font-weight: 300;
+                font-family: $default_fontFamily;
+            }
+        }
+
+        .content-wrapper {
+            .wrapper-header {
+                margin-bottom: 14px;
+
+                h4.ui.header {
+                    font-weight: 400;
+                    font-family: $default_fontFamily;
+                    font-size: 14px;
+                }
+
+                &:nth-child(1) {
+                    h4.ui.header {
+                        font-weight: 700;
+                        font-family: $default_fontFamily;
+                    }
+                }
+            }
+            & .row:last-child {
+                border-radius: 0 0 8px 8px;
+                border-left: 1px solid $celeste;
+                border-right: 1px solid $celeste;
+                border-bottom: 1px solid $celeste;
+            }
+        }
+    }
+    &__preferences {
+        margin: 88px auto 0;
+        max-width: 596px;
+
+        .primary-card__content {
+            .wrapper-header, .wrapper-dropdown {
+                margin-bottom: 34px;
+            }
+        }
+        
+        .ui.dropdown {
+            width: 100%;
+            border-color: $silver;
+            border-radius: 4px;
+            color: $shuttle_grey;
+            & .menu>.item {
+                color: $black;
+            }
+            &.disabled {
+                opacity: 1;
+                background-color: $white;
+            }
+        }
+
+        h4.ui.header {
+            font-weight: 400;
+            font-family: $default_fontFamily;
+            font-size: 18px;
+        }
+
+        h5.ui.header {
+            font-weight: 400;
+            font-family: $default_fontFamily;
+            font-size: 14px;
+        }
+    }
+    
+    .content-wrapper {
+        width: 276px;
+        margin: 24px auto;
+    }
+}

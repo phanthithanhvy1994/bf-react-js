@@ -1,0 +1,24 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.active.visible.pointing.dropdown.link.item.menu-user-profile{
+  background-color: $header_bgColor
+}
+
+.header-bf {
+  & .ui.secondary.inverted.menu {
+    & .ui.dropdown.menu-user-profile {
+      & .menu > .item {
+        font-size: 14px !important;
+      }
+    }
+  }
+}
+
+.menu-user-profile{
+  & .menu.transition{
+    min-width: 220px !important;
+  }
+  :hover{
+    cursor: pointer;
+  }
+}

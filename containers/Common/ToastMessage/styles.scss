@@ -1,0 +1,22 @@
+@import 'src/assets/scss/stylesConfig.scss';
+.Toastify__toast-container {
+    width: 336px;
+}
+.Toastify__toast--default {
+    padding: 14px;
+    border-radius: 4px;
+}
+.Toastify__toast-body {
+    padding: 48px 0;
+    & .centered {
+        text-align: center;
+        & .wrapper-header {
+            margin-top: 8px;
+            .ui.header {
+                color: $black;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+    }
+}

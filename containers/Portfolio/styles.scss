@@ -1,0 +1,313 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.portfolio {
+  padding: 0px;
+
+  &__container {
+    margin-top: 24px;
+    margin-bottom: 24px;
+
+    & h1.ui.header {
+      font-size: 32px;
+      color: $text_header;
+      font-weight: 300;
+      font-family: $default_fontFamily;
+      font-style: normal;
+    }
+
+    & button.btn--create {
+      .wrapper-image {
+        float: right;
+        margin-left: 12px;
+        margin-top: 1px;
+      }
+    }
+    & .ui.selection.dropdown.btn--delete {
+      width: 91px;
+      height: 40px;
+      min-width: unset;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      line-height: 24px;
+      padding-top: 6px;
+      padding-bottom: 10px;
+      padding-left: 24px;
+      & .delete-arrow-down {
+        border: solid;
+        border-width: 0 1px 1px 0;
+        display: block;
+        padding: 4px;
+        margin: 5px 0;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+      }
+      & .item {
+        & .text {
+          color: $black;
+          font-size: 14px;
+        }
+        &:hover{
+          & .text{
+            color: $white;
+          }
+        }
+        &.disabled {
+          & .text {
+            color: $shuttle_grey;
+          }
+        }
+      }
+    }
+
+    & .ui.selection.active.dropdown .menu {
+      width: 160px;
+      left: -22px;
+      & div {
+        line-height: 26px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: stretch;
+    margin-top: 25px;
+    justify-content: space-between;
+    & > div {
+      display: flex;
+    }
+    .wrapper-dropdown {
+      margin-left: 16px;
+      .ui.button.dropdown {
+        height: 40px;
+        font-weight: normal;
+        padding-right: 8px;
+        background-color: transparent;
+        border: 1px solid $dropdown_border_color;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: rgba($black, .87);
+        &:hover {
+          border: 1px solid $dropdown_border_color_hover;
+        }
+        i {
+          color: rgba($black, .87);
+          opacity: 1;
+        }
+        &.active {
+          border: 1px solid $seagull;
+          color: $dropdown_icon_active;
+          i {
+            &:not(.angle) {
+              color: $dropdown_icon_active;
+              transform: none;
+            }
+          }
+        }
+        .trigger-name {
+          margin-right: 16px;
+          i {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  & div.default-dropdown {
+    display: inline-block;
+    margin-left: 0;
+    & .ui.selection.dropdown {
+      text-align: center;
+      color: $blue;
+      border: 1px solid $blue;
+      font-size: 14px;
+      &.disabled {
+        color: $dim_grey;
+        background-color: $light_grey;
+        border: 1px solid $light_grey;
+      }
+    }
+    &.hide {
+      display: none;
+    }
+  }
+  & .ui.selection.visible.dropdown>.text:not(.default) {
+    color: $blue;
+  }
+}
+
+.list-of-engagements {
+  &__container {
+    & .ui.selectable.table {
+      tbody {
+        box-shadow: rgba(0, 0, 0, 0.12) 1px 1px 4px 1px;
+        tr {
+          td {
+            &.row-disabled {
+              color: $dim_grey;
+              background-color: $whisper;
+              & .wrapper-radio {
+                .ui.fitted.radio.checkbox {
+                  .box::before,
+                  label::before {
+                    border-color: $blue;
+                    background-color: $whisper;
+                  }
+                  &.checked {
+                    label::before {
+                      border-color: $blue;
+                      background-color: $blue;
+                    }
+                  }
+                }
+
+              }
+            }
+          }
+          &:hover{
+            background: $whisper !important;
+            td {
+              &.row-disabled {
+                color: $blue;
+                background-color: $whisper;
+              }
+            }
+          }
+        }
+
+        td {
+          &.eng-name {
+            max-width: 279px;
+          }
+
+          &.eng-ent {
+            max-width: 274px;
+          }
+          &.eng-radio{
+            width: 60px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  & .div--centered {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  .wrapper-radio .ui.radio.checkbox {
+    min-width: 16px;
+    min-height: 16px;
+
+    input:focus:checked ~ .box::before,
+    input:focus:checked ~ label::before,
+    input:checked ~ .box::before,
+    input:checked ~ label::before {
+      width: 16px;
+      height: 16px;
+    }
+
+    .box::after,
+    label::after,
+    input:checked~.box::after,
+    input:checked~label::after,
+    input:focus~.box::after,
+    input:focus~label::after {
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      transform: translate(-50%, 60%);
+      left: 50%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.ui.modal.basic-model.approve-delete-modal {
+  .actions {
+    button.ui.button {
+      padding: 6px 24px 10px 24px;
+      height: 40px;
+      &.btn--closed {
+        width: 100px;
+      }
+      &.btn--confirmed {
+        width: 104px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $min_width_tablet) {
+  .wrapper-table {
+    .ui.table {
+      tbody td {
+        &.eng-name {
+          max-width: $min_width_tablet * 0.2;
+        }
+
+        &.eng-ent {
+          max-width: $min_width_tablet * 0.2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $min_width_computer) and (max-width: $max_width_computer) {
+  .main-bf {
+    .list-of-engagements {
+      &__container {
+        td {
+          &.eng-name,
+          &.eng-ent {
+            .div--truncated {
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $min_width_computer) and (max-width: $max_width_largeMonitor) {
+  .main-bf {
+    .portfolio {
+      margin: auto 12.5em;
+      &__container {
+        width: 100%;
+      }
+    }
+    .list-of-engagements {
+      margin: auto 12.5em;
+      &__container {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $max_width_largeMonitor) {
+  .main-bf {
+    .portfolio {
+      margin: auto 12em;
+      &__container {
+        width: 100%;
+      }
+    }
+    .list-of-engagements {
+      margin: auto 12em;
+      &__container {
+        width: 100%;
+      }
+    }
+  }
+}

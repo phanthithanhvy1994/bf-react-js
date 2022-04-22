@@ -1,0 +1,131 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.sub-top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  & .ui.menu {
+    background: $black;
+    box-shadow: 0px 4px 7px 2px $modal_boxshadow;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    min-height: 48px;
+
+    & div {
+      display: flex;
+    }
+    & .item.dropdown {
+      letter-spacing: 0.6px;
+      font-family: $default_fontFamily;
+      &:hover {
+        background: $limerick;
+        font-weight: 700;
+        .divider.text {
+          transform: scale(1.04);
+        }
+      }
+      .caret.up.icon {
+        position: absolute;
+        color: $whisper;
+        top: calc(100% + 2px);
+        margin: 0 0 0 0.1em;
+        font-size: 32px;
+        z-index: 1;
+      }
+      .menu.transition {
+        display: none;
+        width: 218px;
+        background: transparent;
+        font-size: 13px;
+        line-height: 18px;
+        border-radius: 2px;
+        top: 100%;
+        border: none;
+        box-shadow: none;
+        &.visible {
+          display: flex;
+        }
+        div {
+          box-shadow: $submenu_lr_boxshadow;
+          background: $whisper;
+          border-bottom: 1px solid $dropdown_menu_item_border;
+          &.bg_transparent {
+            background: transparent !important;
+            height: 23px;
+            border-bottom: none;
+          }
+          &:last-child {
+            box-shadow: $submenu_w_bottom_boxshadow;
+            border-bottom: none;
+          }
+          a.item {
+            color: $black;
+            align-items: center;
+            width: 210px;
+            height: 59px;
+            padding: 20px 16px 10px 16px;
+            font-weight: normal;
+            flex: 1;
+            &.active {
+              background: rgba($black, .03);
+            }
+            &:hover {
+              background: $limerick;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+    & .item {
+      font-size: 15px;
+      padding: 14px 24px;
+      color: $transparent_text;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+      letter-spacing: 0.6px;
+      &.active {
+        background: $black;
+        color: $light_green;
+        font-weight: 700;
+        letter-spacing: 0;
+        &:hover {
+          color: $white;
+        }
+        &:after {
+          content: none;
+        }
+      }
+      &:hover {
+        background: $limerick;
+        color: $transparent_text;
+        &:after {
+          font-weight: 700;
+        }
+      }
+      &:before {
+        content: none;
+      }
+      &:after {
+        content: attr(aria-label);
+        position: absolute;
+        color: $white;
+      }
+    }
+    & > .item:first-child {
+      border-radius: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $min_width_tablet) {
+  .sub-top-nav .ui.menu .item {
+    padding: 14px 16px;
+  }
+}

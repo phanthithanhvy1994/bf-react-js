@@ -1,0 +1,98 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.modal.dialogue-modal {
+  width: 460px;
+  height: 207px;
+  margin: 0;
+  padding: 0;
+  font-family: $default_fontFamily;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 18px $dialogue_modal_shadown1, 0px 0px 1px $dialogue_modal_shadown2;
+  border-radius: 4px;
+  & >.header {
+    font-size: 18px;
+    border-bottom: unset;
+    line-height: 24px;
+    padding: 32px 30px 22px 35px;
+    font-weight: normal;
+    color: $default_color;
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    img {
+      float: left;
+      padding-right: 9px;
+    }
+    .typo-subheading2 {
+      color: $black;
+    }
+  }
+  .modal-close-btn {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+  }
+  & >.content {
+    font-size: 14px;
+    border-bottom: unset;
+    line-height: 24px;
+    color:$default_color;
+    padding: 0 30px 20px 30px;
+    font-weight: normal;
+    .typo-bodycopyregular {
+      color: $black;
+    }
+  }
+  & >.actions {
+    border-top: unset;
+    background: unset;
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    padding: 0;
+    .ui.button {
+      margin-right: 0;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-family: $default_fontFamily;
+      border-radius: 4px;
+      padding: 8.5px 30px;
+      font-size: 14px;
+      line-height: 18.91px;
+    }
+  }
+  .btn--closed {
+    color: $dialogue_modal_btn;
+    background-color: unset;
+    margin-left: 0;
+    width: 105px;
+    height: 36px;
+    border: 1px solid $secondary_btn;
+    &:hover {
+      color: $secondary_btn_hover;
+      background-color: $secondary_btn_bg_hover;
+      font-weight: normal;
+    }
+  }
+  .btn--confirmed {
+    color: $primary_btn;
+    background-color: $dialogue_modal_btn;
+    border: 1px solid $dialogue_modal_btn;
+    height: 36px;
+    margin-left: 16px;
+    &:hover {
+      color: $primary_btn_hover;
+      background-color: $primary_btn_bg_hover;
+      font-weight: normal;
+    }
+  }
+  &.approve-delete-modal {
+    height: 183px;
+  }
+  &.invalid-email-modal {
+    .btn--closed {
+      color: $primary_btn;
+      background-color: $dialogue_modal_btn;
+    }
+  }
+}

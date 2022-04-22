@@ -1,0 +1,77 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.inline-wrapper {
+  width: 620px;
+  height: 193px;
+  box-shadow: inset 0px -1px 0px $inline_box_shadown;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 4px;
+  .inline-title {
+    padding: 18px 16px 11px 21px;
+    display: flex;
+    align-items: center;
+    .inline-text {
+      font-family: $default_fontFamily;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 22px;
+      letter-spacing: 0;
+      text-align: left;
+      color: $black;
+    }
+    .ui.image {
+      float: left;
+      padding-right: 9px;
+    }
+  }
+  .inline-content {
+    padding: 0 15px;
+    font-family: $default_fontFamily;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .inline-action {
+    float: right;
+    display: flex;
+    padding-top: 56.5px;
+    padding-right: 33px;
+    text-transform: capitalize;
+    color: $inline_button;
+    font-family: $default_fontFamily;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0;
+    cursor: pointer;
+    .ui.image {
+        padding-right: 6.42px;
+    }
+  }
+  &.success {
+    border: $inline_border_success;
+    background: linear-gradient(0deg, $inline_bg_success, $inline_bg_success), linear-gradient(0deg, $white, $white);
+  }
+  &.information {
+    border: $inline_border_information;
+    background: linear-gradient(0deg, $inline_bg_information, $inline_bg_information), linear-gradient(0deg, $white, $white);
+  }
+  &.guidance {
+    border: $inline_border_guidance;
+    background: linear-gradient(0deg, $inline_bg_guidance, $inline_bg_guidance), linear-gradient(0deg, $white, $white);
+  }
+  &.warning {
+    border: 1px solid $inline_border_warning;
+    background: linear-gradient(0deg, $inline_bg_warning, $inline_bg_warning), linear-gradient(0deg, $white, $white);
+  }
+  &.error {
+    border: 1px solid $inline_border_error;
+    background: linear-gradient(0deg, $inline_bg_error, $inline_bg_error), linear-gradient(0deg, $white, $white);
+  }
+}

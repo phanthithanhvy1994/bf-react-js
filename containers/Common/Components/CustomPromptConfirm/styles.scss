@@ -1,0 +1,79 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.tiny.modal.warning-prompt {
+  width: 500px;
+  margin: 0;
+}
+
+.ui.modal.warning-prompt{
+  font-family: $default_fontFamily;
+  & >.header {
+    font-size: 18px;
+    border-bottom: unset;
+    line-height: 24px;
+    padding: 48px 48px 3px 48px;
+    font-weight: normal;
+    color:$default_color
+  }
+  & >.content {
+    font-size: 14px;
+    border-bottom: unset;
+    line-height: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    color:$default_color
+  }
+  & >.actions {
+    border-top: unset;
+    padding: 3px 48px 61px 48px;
+    background: unset;
+  }
+  & .cancelBtn, .dontSaveBtn{
+    color: $secondary_btn;
+    background-color: unset;
+    font-weight: normal;
+  }
+  & .cancelBtn{
+    float: left;
+    margin: 0;
+    padding-left: 0px;
+  }
+  & .dontSaveBtn{
+    border: 1px solid $secondary_btn;
+    margin-right: 20px;
+  }
+  & .cancelBtn:hover{
+    color: $secondary_btn;
+    background-color: unset;
+    font-weight: normal;
+  }
+  & .dontSaveBtn:hover{
+    color: $secondary_btn_hover;
+    background-color: $secondary_btn_bg_hover;
+    font-weight: normal;
+  }
+  & .saveBtn{
+    color: $primary_btn;
+    background-color: $primary_btn_bg;
+    font-weight: normal;
+    margin-right: 13px;
+    border: 1px solid $primary_btn_bg;
+  }
+  & .saveBtn.disabled {
+    background-color: $disabled_btn_bg;
+    color: $disabled_btn;
+    border: 1px solid $disabled_btn_bg;
+  }
+  & .saveBtn:hover{
+    color: $primary_btn_hover;
+    background-color: $primary_btn_bg_hover;
+    font-weight: normal;
+    border: 1px solid $primary_btn_bg_hover;
+  }
+}
+
+@media only screen and (max-width: $max_width_mobile) {
+  .warning-prompt {
+    padding: 40px 32px 61px;
+  }
+} 

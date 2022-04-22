@@ -1,0 +1,80 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.multiple-select-search {
+    &__values {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__value {
+        background-color: $soft_blue;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        border-radius: 8px;
+        padding: 5px;
+        margin-bottom: 16px;
+        margin-right: 16px;
+        font-size: 12px;
+
+        :first-child {
+            margin-left: 2px;
+        }
+
+        :last-child {
+            cursor: pointer;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.disabled {
+            background-color: $whisper;
+            color: $shuttle_grey;
+        }
+    }
+
+    &__input {
+        flex-direction: row-reverse;
+
+        input {
+            &::placeholder {
+                padding-left: 20px;
+                color: $shuttle_grey !important;
+                font-weight: 400;
+                font-size: 14px;
+            }
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 7px;
+            left: 10px;
+            background-image: url("src/assets/icons/svgs/financial_institutions_search_icon.svg");
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    .ui.input.disabled input {
+        background-color: $whisper;
+        color: $shuttle_grey;
+        opacity: initial;
+    }
+
+    .visible {
+        .results.transition {
+            display: block !important;
+            visibility: visible !important;
+        }
+    }
+
+    .invisible {
+        .results.transition {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "GetGlobalEmployeeByEmailIds": [
+    {
+      "countryCode": "CA",
+      "countryDesc": "Canada",
+      "email": "hlengoc@Project Name.ca",
+      "employeeAlias": "huyle",
+      "employeeStatusCode": "1",
+      "employeeStatusDesc": "Active",
+      "employeeType": "Full-Time",
+      "firstName": "Huy",
+      "globalPersonId": 1998003649,
+      "globalPersonUid": "00000000-0000-0000-0000-000077171cd1",
+      "jobTitle": "TieOut PMT Team",
+      "lastName": "Le",
+      "linkedGlobalPersonIds": null,
+      "linkedGlobalPersonUids": null,
+      "linkedPersonIds": null,
+      "memberFirmCode": "CA",
+      "mobilePhone": null,
+      "officeCode": "TPAV",
+      "officeDesc": "Princeton-TieOut Test",
+      "organizationCode": "AUDIT",
+      "organizationDesc": "Audit",
+      "outlookDisplayName": "Huy, Le (CA - Princeton)",
+      "pPMD": false,
+      "preferredFullName": "Huy, Le",
+      "workPhone": "1-8137693225"
+    }
+  ]
+}

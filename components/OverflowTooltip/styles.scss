@@ -1,0 +1,27 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.div--truncated {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ui.popup.transition.visible.popup--invisible {
+  opacity: 0;
+}
+
+.ui.popup.transition.visible.engagement-clm-tooltip {
+  background: $whisper;
+  border-radius: 4px;
+  box-shadow: $elevation_2_2_3;
+  word-break: break-all;
+
+  .content {
+    font-size: 14px;
+    color: $black;
+  }
+}
+
+.ui.top.popup:before {
+  background: $whisper;
+}

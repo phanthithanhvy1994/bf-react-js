@@ -1,0 +1,73 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.react-datepicker-time--container__custom {
+    .react-datepicker__input-time-container {
+        margin: 0;
+        .react-datepicker-time__input {
+            margin: 0px;
+        }
+    }
+
+    .custom-input {
+        width: 100%;
+        &.ui.icon.input {
+            .icon.clock-svg {
+                &::before {
+                    content: url('src/assets/Icons/svgs/clock.svg');
+                }
+            }
+            &.keep-focus > input ~ .icon.clock-svg,
+            > input:focus ~ .icon.clock-svg {
+                opacity: 1;
+                filter: invert(51%) sepia(10%) saturate(2967%) hue-rotate(158deg) brightness(78%) contrast(103%);
+            }
+            &.keep-focus input {
+                border-color: $seagull;
+            }
+            &.error input {
+                border-color: $brick_red;
+            }
+        }
+    }
+
+    .custom-time-input {
+        display: flex;
+        padding: 6px 16px;
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            margin: 0 6px;
+            justify-content: center;
+
+            .wrapper-icon {
+                color: $blue;
+                padding: 6px 0 6px 12px;
+                cursor: pointer;
+            }
+
+            .wrapper-input .ui.input {
+                input {
+                    font-family: "Open Sans";
+                    font-size: 14px;
+                    line-height: 20px;
+                    width: 56px;
+                    border-radius: 0;
+                    padding: 5px 12px;
+                    &:focus {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+}

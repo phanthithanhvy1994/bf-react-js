@@ -1,0 +1,198 @@
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<table bgcolor="#F5F5F5" style="width:100%; background-color: rgb(245,245,245);" align="center" border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td></td>
+      <td width="600" height="20">
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td width="600">
+        <table bgcolor="#FFFFFF" style="width:100%; background-color: rgb(255,255,255); border-radius: 8px 8px 0px 0px" align="center" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td></td>
+              <td width="536" height="64">
+                <img style="display: inline-block;" src="{{domain}}/Project Name_mail_template.png" alt="Project Name logo">
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <table bgcolor="#F2F2F2" style="width:100%;background-color: rgb(242,242,242);" align="center" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td></td>
+              <td width="520" height="26">
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td width="520">
+                <table style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table bgcolor="#FFFFFF" style="width:100%; background-color: rgb(255, 255, 255);" align="center" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td width="24"></td>
+                              <td height="24"></td>
+                              <td width="24"></td>
+                            </tr>
+                            <tr>
+                              <td width="24"></td>
+                              <td>
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;color: #86BC25;font-size: 18px;line-height: 25px;font-weight: bold;font-style: normal;margin: 0px 0px 16px 0px">
+                                  Omnia
+                                </p>
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;margin: 0px;font-size: 10px;line-height: 13.62px;font-weight: 600;font-style: normal;margin: 0px 0px 16px 0px;color: rgba(0, 0, 0, 0.86);width: 102px;height: 14px;">
+                                  GroupName Data Extraction
+                                </p>
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;margin: 0px;font-size: 10px;line-height: 12px;font-weight: 600;margin: 0px 0px 13px 0px">
+                                  <span style="color:#75787B">Audit &amp; Assurance, for internal use only</span> &emsp;|&emsp;
+                                  <span style="color: #2375A4;">{{sendDate}}</span>
+                                </p>
+
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: 400;font-style: normal; margin: 0px;color: rgba(0, 0, 0, 0.86);">
+                                  Dear <span style="color: #2375A4;font-weight: bold;">{{engagementOwner}}</span>,
+                                </p><br>
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: 400;font-style: normal; margin: 0px 0px 20px 0px;color: rgba(0, 0, 0, 0.86);">
+                                  In preparation for your scheduled data extraction on <span style="color: #2375A4;font-weight: bold;">{{dateScheduled}}</span>, the Consent ID(s) for the following financial institutions have been identified as invalid:
+                                </p>
+                                {{Institution}}
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: bold;color: #2375A4;margin: 0px 0px 20px 0px">
+                                  {{institutionName}} ({{countryName}} - {{countryCode}}), {{ClientName}}
+                                </p>
+                                {{/Institution}}
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: 400;font-style: normal; margin: 0px 0px 0px 0px;color: rgba(0, 0, 0, 0.86);">The most common reasons for Consent ID(s) to become invalid are:</p>
+                                <ul style="padding-left: 16px;font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: 400;font-style: normal;margin: 0px 0px 20px 0px;color: rgba(0, 0, 0, 0.86);">
+                                  <li style="font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: 400;font-style: normal; color: rgba(0, 0, 0, 0.86);">The Consent ID(s) expired as the engagement owner did not extend it.</li>
+                                  <li style="font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: 400;font-style: normal; color: rgba(0, 0, 0, 0.86);">Your client’s credentials for the financial institution(s) changed.</li>
+                                </ul>
+                                <p style="font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 14px;line-height: 24px;font-weight: 400;font-style: normal; margin: 0;color: rgba(0, 0, 0, 0.86);">Valid Consent ID(s) are a prerequisite for successfully extracting GroupName data. For reauthorization of financial institutions where the Consent ID(s) are invalid please reach out to your client contact and access your engagement* to resend an authorization request.</p>
+                                <table style="width:100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                                  <tbody>
+                                    <tr>
+                                      <td width="264">
+                                        <p style="background-color: #2375A4; border-radius: 4px; text-align: center; margin: 24px 0 0 0;height: 40px;">
+                                          <a href="{{institution}}" target="_self" style="text-decoration: none; color: #FFFFFF; display: block;font-size: 14px;padding: 8px 40px;background-color: #2375A4;text-align: center;border-radius: 4px;line-height: 24px; font-weight: 400;font-family: Open Sans,Arial, Helvetica, sans-serif;">Access GroupName Data Extraction</a>
+                                        </p>
+                                      </td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td width="24"></td>
+                            </tr>
+                            <tr>
+                              <td width="24"></td>
+                              <td height="24"></td>
+                              <td width="24"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td height="24"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table bgcolor="#FFFFFF" style="width:100%; background-color: rgb(255, 255, 255);" align="center" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td width="24"></td>
+                              <td height="24"></td>
+                              <td width="24"></td>
+                            </tr>
+                            <tr>
+                              <td width="24"></td>
+                              <td>
+                                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 18px;line-height: 24px;font-weight: 400;font-style: normal; margin: 0;">
+                                  For technology questions or system support
+                                </p>
+
+                                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; margin: 16px 0;">
+                                  Call {{callNumber}} or US Toll Free {{tollFreeNumber}}
+                                </p>
+                                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; margin: 16px 0;">
+                                  or Email <a href="mailto:{{emailName}}" style="text-decoration: none; color: #000000;"><strong style="color: #2375A4;text-decoration:underline;font-weight: 400;font-size: 12px;line-height: 20px;">{{emailName}}</strong></a>
+                                </p>
+                                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 10px;line-height: 12px;font-weight: 400;font-style: normal; margin: 16px 0;">* Project Name''s GroupName Data Extraction is compatible with Microsoft Edge Chromium and Google Chrome.</p>
+
+                                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; margin: 0;">This is an automated email. Please do not reply directly to this email.</p>
+                              </td>
+                              <td width="24"></td>
+                            </tr>
+                            <tr>
+                              <td width="24"></td>
+                              <td height="24"></td>
+                              <td width="24"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td width="520" height="24">
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <table bgcolor="#FFFFFF" style="width: 100%;background-color: rgb(255, 255, 255);border-radius: 0px 0px 8px 8px;" align="center" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td width="40"></td>
+              <td height="32">
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td>
+                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; margin: 0px 0px 21px 0px">
+                  Project Name refers to one or more of Project Name Touche Tohmatsu Limited (“DTTL”), its global network of member firms, and their related entities (collectively, the “Project Name organization”). DTTL (also referred to as “Project Name Global”) and each of its member firms and related entities are legally separate and independent entities, which cannot obligate or bind each other in respect of third parties. DTTL and each DTTL member firm and related entity is liable only for its own acts and omissions, and not those of each other. DTTL does not provide services to clients. Please see <a href="https://www.Project Name.com/about" style="font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; color:#2375A4">www.Project Name.com/about</a> to learn more.
+                </p>
+                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; margin: 0px 0px 21px 0px">
+                  Project Name provides industry-leading audit and assurance, tax and legal, consulting, financial advisory, and risk advisory services to nearly 90% of the Fortune Global 500® and thousands of private companies. Our professionals deliver measurable and lasting results that help reinforce public trust in capital markets, enable clients to transform and thrive, and lead the way toward a stronger economy, a more equitable society and a sustainable world. Building on its 175-plus year history, Project Name spans more than 150 countries and territories. Learn how Project Name’s more than 345,000 people worldwide make an impact that matters at <a href="https://www.Project Name.com" style="font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; color:#2375A4">www.Project Name.com</a>.
+
+                </p>
+                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; margin: 0">This communication contains general information only, and none of the Project Name organization is, by means of this communication, rendering professional advice or services. Before making any decision or taking any action that may affect your finances or your business, you should consult a qualified professional adviser. No representations, warranties or undertakings (express or implied) are given as to the accuracy or completeness of the information in this communication, and none of DTTL, its member firms, related entities, employees or agents shall be liable or responsible for any loss or damage whatsoever arising directly or indirectly in connection with any person relying on this communication.</p>
+
+                <p style="color: rgba(0,0,0,0.86);font-family: Open Sans,Arial, Helvetica, sans-serif;font-size: 12px;line-height: 20px;font-weight: 400;font-style: normal; margin: 16px 0 0 0">
+                  © <span style="color: #2375A4">{{currentYear}}. </span>All rights reserved.
+                </p>
+              </td>
+              <td width="40"></td>
+            </tr>
+            <tr>
+              <td width="40"></td>
+              <td height="32">
+              </td>
+              <td width="40"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td width="600" height="20">
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>

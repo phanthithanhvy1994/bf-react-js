@@ -1,0 +1,23 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+/* Change the $white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px $white inset !important;
+}
+
+.wrapper-input{
+  & .ui.input {
+    & > input {
+      line-height: 18px;
+      font-family: $default_fontFamily;
+      color: $default_color;
+    }
+    &.error > input {
+      border-color: $input_errorColor;
+    }
+  }
+}

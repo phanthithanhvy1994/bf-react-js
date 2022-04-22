@@ -1,0 +1,63 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.tiny.modal.signout-modal {
+  width: 515px;
+  margin: 0;
+}
+
+.ui.modal.signout-modal {
+  font-family: $default_fontFamily;
+  & >.header {
+    font-size: 18px;
+    border-bottom: unset;
+    line-height: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-top: 48px;
+    padding-bottom: 3px;
+    font-weight: normal;
+    color:$default_color
+  }
+  & >.content {
+    font-size: 16px;
+    border-bottom: unset;
+    line-height: 24px;
+    padding-left: 48px;
+    padding-right: 48px;
+    color:$default_color
+  }
+  & >.actions {
+    border-top: unset;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 48px;
+    background: unset;
+  }
+  .btn--closed {
+    float: left;
+    color: $secondary_btn;
+    background-color: unset;
+    font-weight: normal;
+  }
+  & .btn--closed {
+    border: 1px solid $secondary_btn;
+  }
+  & .btn--closed:hover {
+    color: $secondary_btn_hover;
+    background-color: $secondary_btn_bg_hover;
+    font-weight: normal;
+  }
+  .btn--confirmed {
+    color: $primary_btn;
+    background-color: $primary_btn_bg;
+    font-weight: normal;
+  }
+  & .btn--confirmed {
+    border: 1px solid $primary_btn_bg;
+  }
+  & .btn--confirmed:hover {
+    color: $primary_btn_hover;
+    background-color: $primary_btn_bg_hover;
+    font-weight: normal;
+  }
+}

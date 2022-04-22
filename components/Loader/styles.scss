@@ -1,0 +1,43 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.wrapper-loader:not(.inline){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    color: $wrapper_loader;
+    font-size: 30px;
+
+    .loader-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($black, 0.25);
+        z-index: 1000;
+        &.hide {
+            display: none;
+        }
+    }
+}
+
+.ui.loader.custom-loader {
+    width: 125px;
+    height: 125px;
+    &::before,
+    &::after {
+      width: 125px;
+      height: 125px;
+      border-width: 10px;
+      top: 0;
+      left: 0;
+    }
+    &::before {
+      border-color: $raven;
+    }
+    &::after {
+      border-color: $whisper transparent transparent;
+    }
+  }

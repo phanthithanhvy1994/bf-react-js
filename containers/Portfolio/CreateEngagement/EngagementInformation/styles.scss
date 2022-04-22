@@ -1,0 +1,77 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.engagement-creation-wrapper {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: $default_fontFamily;
+    .ui.form input {
+        font-family: $default_fontFamily;
+        color: $shuttle_grey;
+    }
+    .ec-header--sticky {
+        background: $chathams_blue;
+        border-radius: 8px 8px 0px 0px;
+        position: sticky;
+        color: $white;
+        font-size: 1.25rem;
+        padding: 30px 20px 30px 80px;
+        font-weight: 300;
+        top: 0;
+        z-index: 1;
+        .close-btn {
+            position: absolute;
+            top: 37px;
+            right: 39px;
+            cursor: pointer;
+            padding: 2px;
+        }
+    }
+    .ec-content-wrapper {
+        box-sizing: border-box;
+        .ec-content {
+            width: 400px;
+            max-width: 100%;
+            margin: 50px auto;
+            .ec-input {
+                margin-bottom: 25px;
+                .form-control {
+                    width: 100%;
+                }
+                label { 
+                    display: block;
+                    margin-bottom: 20px;
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                .react-datepicker-wrapper {
+                    .ui.input {
+                        width: 100%;
+                    }
+                }
+                .ui.dropdown > .text {
+                    color: $shuttle_grey;
+                }
+            }
+            .ec-title {
+                font-size: 20px;
+                font-weight: 300;
+                margin: 50px 0 25px 0;
+                &--zambezi {
+                    color: $zambezi;
+                }
+            }
+            .ui.button {
+                &.btn-back {
+                  float: left;
+                }
+
+                &.btn-login {
+                  float: right;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.form {
+  .dropdown {
+    &.disabled {
+      background-color: $dropdown_disabled_bg;
+    }
+  }
+  .ui.selection.dropdown.error {
+    background-color: unset;
+    border-color: $brick_red;
+  }
+  .ui.search {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $default_fontFamily;
+  }
+}

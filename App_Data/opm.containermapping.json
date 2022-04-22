@@ -1,0 +1,31 @@
+{
+  "GetContainerMapping": [
+    {
+      "containerCode": "CA",
+      "containerName": "Canada",
+      "geoCode": "EMA",
+      "memberFirmCode": "ca",
+      "countryCode": "CA",
+      "countryName": "Canada",
+      "containerId":  5
+    },
+    {
+      "containerCode": "NL",
+      "containerName": "New Zeland",
+      "geoCode": "EMA",
+      "memberFirmCode": "NZ",
+      "countryCode": "NZ",
+      "countryName": "New Zeland",
+      "containerId": 6
+    },
+    {
+      "containerCode": "GB",
+      "containerName": "GB",
+      "geoCode": "EMA",
+      "memberFirmCode": "GB",
+      "countryCode": "GB",
+      "countryName": "GB",
+      "containerId": 7
+    }
+  ]
+}

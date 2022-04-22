@@ -1,0 +1,192 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.manage-team-modal {
+  padding: 20px;
+
+  &__header {
+    font-family: $default_fontFamily;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: $black;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $celeste;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    background: $white;
+    border-top: none;
+    text-align: left;
+    .wrapper-button {
+      .ui.button {
+        height: 48px;
+        font-size: 16px;
+        line-height: 32px;
+        font-style: normal;
+        font-weight: 400;
+      }
+      & + .wrapper-button {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__error {
+    min-height: 72px;
+    max-height: 124px;
+    padding: 24px;
+    box-shadow: 0px 0px 0px 1px $dark_red;
+    border-radius: 5px;
+    margin: 16px 0px;
+    background-color: $soft_red;
+    overflow: auto;
+    .member-message {
+      display: flex;
+      :first-child {
+        padding-right: 8px;
+      }
+      img {
+        max-width: none;
+      }
+    }
+    .error {
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 400;
+      color: $black;
+      font-family: $default_fontFamily;
+    }
+  }
+
+  & > &__error {
+    margin: -8px 0px 24px;
+  }
+
+  &__deactivate-title {
+    text-align: end;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $celeste;
+    padding-right: 32px;
+  }
+
+  &__search-input {
+    max-width: 70%;
+    margin-bottom: 12px;
+  }
+
+  &__search-input-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $black;
+    :first-child {
+      margin-right: 8px;
+    }
+  }
+
+  &__member-list {
+    max-height: 470px;
+    min-height: 212px;
+    overflow: auto;
+    margin-bottom: 24px;
+  }
+
+  &__member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid $celeste;
+    background-color: $white;
+  }
+
+  &__member-info {
+    padding: 16px 0;
+    width: 40%;
+    line-height: 24px;
+    font-size: 14px;
+    &--email {
+      color: $raven;
+    }
+  }
+
+  &__member-role {
+    width: 264px;
+    height: 48px;
+    .wrapper-dropdown {
+      .dropdown {
+        height: 48px;
+        padding: 12px 30px 12px 16px;
+        input.search {
+          top: 4px;
+        }
+        .divider.text {
+          color: $raven;
+          top: 4px;
+        }
+        .arrow-down {
+          bottom: 13px;
+          width: 13.5px;
+          border: none;
+          transform: none;
+          background: url(src/assets/Images/icon/caret-down.png) no-repeat center;
+          background-size: contain;
+        }
+      }
+      .disabled.dropdown > .text {
+        color: $grey_chateau;
+      }
+    }
+  }
+
+  &__member-deactivate-check {
+    width: 20%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    .ui.checkbox {
+      width: 20px;
+      height: 20px;
+      label {
+        &::before,
+        &::after {
+          width: 20px;
+          height: 20px;
+        }
+        &::before {
+          border: 1px solid $gray;
+          border-radius: 2px;
+        }
+        &::after {
+          font-size: 16px;
+        }
+      }
+      input {
+        &:checked~label::after {
+          content: '';
+          border: 1px solid $celeste;
+          background: url(src/assets/Images/icon/tick.png) no-repeat center $whisper;
+          background-size: contain;
+          background-origin: content-box;
+          padding: 3px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .disabledField {
+    color: $grey_chateau;
+  }
+
+  .message-success {
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+}

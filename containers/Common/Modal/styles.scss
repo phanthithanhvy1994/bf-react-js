@@ -1,0 +1,297 @@
+@import "src/assets/scss/stylesConfig.scss";
+.ui.modal.basic-model {
+    padding: 48px 48px 61px;
+
+    .header {
+        border-bottom: none;
+        font-size: 18px;
+        font-family: $default_fontFamily;
+        font-weight: 400;
+        color: $black;
+        padding: 0;
+        margin-bottom: 24px;
+        line-height: 24px;
+    }
+    .content {
+        font-size: 14px;
+        font-family: $default_fontFamily;
+        font-weight: 400;
+        color: $black;
+        padding: 0 0 20px 0;
+        margin-bottom: 24px;
+        line-height: 24px;
+    }
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        border-top: none;
+        padding: 0;
+        background-color: $white;
+
+        button.ui.button {
+            line-height: 24px;
+            padding: 7px 24px;
+            font-family: $default_fontFamily;
+            font-weight: 400;
+            font-size: 14px;
+        }
+    }
+
+    &.confirm-modal {
+        max-width: 400px;
+        .content {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .primary-btn {
+            min-width: 80px;
+        }
+
+        [class*="-btn"] button.ui.button {
+            line-height: 24px;
+        }
+    }
+
+    &.delete-modal {
+        max-width: 354px;
+        padding: 48px;
+        .content {
+            min-height: 45px;
+            padding: 0;
+        }
+        .actions {
+            .ui.button {
+                &.btn--closed {
+                    min-width: 100px;
+                }
+                &.btn--confirmed {
+                    min-width: 104px;
+                }
+            }
+        }
+    }
+    
+    &.approve-delete-modal,
+    &.reject-delete-modal {
+        max-width: 354px;
+        padding: 48px;
+        .content {
+            width: 249px;
+            height: 69px;
+            padding: 0;
+        }
+        .actions {
+            .ui.button {
+                height: 40px;
+                padding: 6px 24px 10px 24px;
+                &.btn--closed {
+                    width: 100px;
+                }
+                &.btn--confirmed {
+                    width: 104px;
+                    margin: 0 7px 0 0;
+                }
+            }
+        }
+    }
+
+    &.resend-modal {
+        max-width: 410px;
+    }
+    &.limit-modal {
+        max-width: 486px;
+        max-height: 235px;
+        .content {
+            padding: 0;
+            height: 32px;
+        }
+    }
+
+    &.leave-modal {
+        max-width: 500px;
+        padding-right: 66px;
+        .actions {
+            background-color: unset;
+            button.ui.button {
+                &.btn--confirmed {
+                    min-width: 80px;
+                }
+                &.btn--closed {
+                    border: none;
+                    background-color: unset;
+                    padding-left: 0;
+                    padding-right: 0;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &.sent-modal {
+        padding: 65px 90px 48px 90px;
+        max-width: 330px;
+        .content {
+            margin: 0;
+            padding: 0;
+        }
+        .close {
+            top: 1.0535rem;
+            right: 1rem;
+            color: $black;
+        }
+    }
+
+    &.warning-modal {
+        padding: 65px 90px 48px 90px;
+        &.warning-timeout-modal {
+            max-width: 490px;
+            padding: 84px 32px 69px 32px;
+            .content {
+                font-size: 18px;
+                padding-bottom: 0;
+            }
+        }
+        .content {
+            margin: 0;
+        }
+        .close {
+            top: 1.0535rem;
+            right: 1rem;
+            color: $black;
+        }
+    }
+
+    &.invalid-email-modal {
+        max-width: 460px;
+    }
+
+    &.deactivate-teamMember-modal {
+        font-style: normal;
+        font-weight: 400;
+        padding: 40px;
+        max-width: 440px;
+        .header {
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+        .content {
+            margin-bottom: 24px;
+            font-weight: 400;
+            padding: 0;
+        }
+        .actions {
+            margin-top: 0px;
+            justify-content: unset;
+            .ui.button{
+                line-height: 16.34px;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 12px;
+                padding: 0;
+            }
+            .btn--closed {
+                margin: 0px;
+                margin-right: 16px;
+                width: 70px;
+                height: 32px;
+            }
+            .btn--confirmed {
+                margin: 0px;
+                width: 91px;
+                height: 32px;
+            }
+        }   
+        .modal-close-btn {
+            top: 16px;
+            right: 16px;
+        }
+    }
+
+    &.matching-warning-modal,
+    &.off-matching-warning-modal {
+        max-width: 500px;
+        .content {
+            padding-bottom: 0;
+            width: 404px;
+        }
+        .actions {
+            justify-content: end;
+            >.button {
+                margin-left: 0px;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &.matching-warning-modal {
+        padding: 48px 51px 34px 48px;
+        .header {
+            width: 401px;
+            height: 28px;
+        }
+        .content {
+            height: 98px;
+        }
+        .actions {
+            button.ui.button {
+                padding: 6px 24px;
+                height: 40px;
+                &.btn--closed {
+                    width: 117px;
+                }
+                &.btn--confirmed {
+                    width: 80px;
+                }
+            }
+        }
+    }
+
+    &.off-matching-warning-modal {
+        padding: 48px 51px 0 48px;
+        height: 267px;
+        .header {
+            height: 28px;
+        }
+        .content {
+            line-height: 23px;
+            height: 74px;
+        }
+        .actions {
+            position: absolute;
+            bottom: 33px;
+            right: 35px;
+            padding: 0;
+            top: 198px;
+            left: 388px;
+            button.ui.button {
+                padding: 8.5px 20px;
+                line-height: 18.91px;
+                font-weight: 600;
+                font-size: 14px;
+                margin-right: 0;
+                margin-left: 0px;
+                border: none;
+            }
+        }
+    }
+
+    .modal-close-btn {
+        position: absolute;
+        top: 24px;
+        right: 32px;
+        padding: 1.5px 2px;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ui.small.modal {
+      width: 746px;
+      margin: 0;
+      .content {
+        padding: 20px;
+      }
+  }
+}

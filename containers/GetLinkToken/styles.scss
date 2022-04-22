@@ -1,0 +1,145 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.modal.error.modal-authorized {
+    width: 429px;
+    background: $white;
+    border: 1px solid $mercury;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 90px 50px 74px 50px;
+    .close-icon {
+        background-image: url("src/assets/images/icon/icon-16.png");
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 19%;
+        right: 9%;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .content {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 0;
+        line-height: 24px;
+    } 
+}
+
+.ui.modal.error.modal-failed {
+    width: 467px;
+    height: 336px;
+    background: $white;
+    border: 1px solid $mercury;
+    box-sizing: border-box;
+    border-radius: 2px;
+    .title {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: left;
+        font-weight: 400;
+    }
+    .content {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: left;
+        width: 344px;
+        font-weight: 400;
+    }
+}
+
+.ui.modal.error.custom-warning-msg {
+    padding-bottom: 0px;
+    .content {
+        font-style: normal;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        margin-top: 0;
+    }
+    .btn--close {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        &:hover {
+            color: $white;
+            background: $close_btn_hover;
+        }
+    }
+    &.link-expired {
+        width: 348px;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 38px;
+        .btn--close {
+            margin-top: 24px;
+            margin-bottom: 54px;
+            width: 89px;
+            height: 40px;
+        }
+    }
+    &.request-deleted {
+        width: 348px;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 26px;
+        .content {
+            width: 272px;
+            height: 52px;
+        }
+        .btn--close {
+            margin-top: 24px;
+            margin-bottom: 30px;
+            padding: 6px 24px;
+            width: 89px;
+            height: 40px;
+        }
+    }
+    &.unable-connect-vendor {
+        width: 379px;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 38px;
+        .btn--close {
+            margin-top: 24px;
+            margin-bottom: 29px;
+        }
+    }
+    &.request-authorized {
+        max-width: 348px;
+        padding-right: 26px;
+        .btn--close {
+            margin-top: 24px;
+            margin-bottom: 32px;
+        }
+    }
+    &.engagement-deleted {
+        width: 379px;
+        padding-top: 50px;
+        padding-left: 50px;
+        padding-right: 26px;
+        .content {
+            width: 291px;
+            height: 76px;
+        }
+        .btn--close {
+            margin-top: 24px;
+            margin-bottom: 53px;
+            padding: 6px 24px 10px 24px;
+            width: 91px;
+            height: 40px;
+        }
+    }
+}
+
+.ui.page.modals.dimmer.active {
+    background: $warning_msg_bg;
+}
+
+.header-bf.directId {
+    position: initial;
+}

@@ -1,0 +1,161 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.react-datepicker--container__custom {
+    .react-datepicker-wrapper {
+        width: 100%;
+    }
+
+    .react-datepicker-popper {
+        .react-datepicker {
+            font-family: $default_fontFamily;
+            border: none;
+            background: $snow;
+            box-shadow: $datepicker_box_shadow;
+            border-radius: 3px;
+            font-size: 1rem;
+
+            &__month-container {
+                box-shadow: $datepicker_box_shadow;
+            }
+            &__triangle {
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                z-index: 1;
+                transform: none !important;
+
+                &:before {
+                    display: none;
+                }
+
+                &:after {
+                    border-bottom-color: $limerick;
+                }
+            }
+            &__header {
+                padding-top: 0.8em;
+                background-color: $limerick;
+                color: $white;
+                border-bottom: none;
+            }
+            &__day-names {
+                background-color: $snow;
+                font-size: 0.625rem;
+                font-weight: bold;
+            }
+            &__day-name {
+                width: 2.2em;
+                color: $midnight_express;
+                margin: 1.5rem 0.53rem 0;
+                opacity: 0.75;
+                font-size: 10px !important;
+                line-height: 16px !important;
+                font-weight: 700 !important;
+            }
+            &__month {
+                margin: 0.4em 0.53em;
+            }
+            &__day {
+                width: 32px;
+                line-height: 32px;
+                color: $charcoal_grey;
+                font-size: 16px;
+                font-weight: 400;
+                margin: 0.225rem 0.166rem;
+                &--outside-month, &--disabled {
+                    color: $midnight_express;
+                    opacity: 0.5;
+                }
+                &--selected {
+                    color: $white;
+                    background-color: $limerick;
+                    border-radius: 50%;
+                }
+                &--keyboard-selected {
+                    background-color: $white;
+                }
+                &:hover {
+                    color: $charcoal_grey;
+                    background-color: $silver;
+                    border-radius: 50%;
+                }
+                &--today {
+                    font-weight: bold;
+                }
+            }
+            &__current-month {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 700;
+                color: $white;
+                padding-bottom: 10px;
+            }
+            &__navigation {
+                top: 10px;
+                line-height: 1.7em;
+                border: 0.45em solid transparent;
+                color: $white;
+
+                &--previous-month {
+                    left: 2.5em;
+                }
+                &--previous-year {
+                    left: 0.5em;
+                }
+                &--next-month {
+                    right: 2.5em;
+                }
+                &--next-year {
+                    right: 0.5em;
+                }
+            }
+            &__navigation-icon {
+                &:before {
+                    border-color: $white;
+                    border-width: 2px 2px 0 0;
+                    height: 6px;
+                    width: 6px;
+                    top: -5px;
+                }
+                &--previous:first-child {
+                    right: 4px;
+                }
+                &--next:first-child {
+                    left: 4px;
+                }
+            }
+        }
+
+        &[data-placement^="top"] {
+            .react-datepicker__triangle {
+                &:after {
+                    display: none;
+                }
+
+                &:before {
+                    display: block;
+                    border-top-color: $snow;
+                }
+            }
+        }
+    }
+
+    .ui.icon.input {
+        &.keep-focus i.icon,
+        > input:focus ~ i.icon {
+            opacity: 1;
+            &.calendar-svg::before {
+                filter: invert(51%) sepia(10%) saturate(2967%) hue-rotate(158deg) brightness(78%) contrast(103%);
+            }
+        }
+        &.keep-focus input {
+            border-color: $seagull;
+        }
+        i.icon.calendar-svg {
+            &::before {
+                content: url('src/assets/Icons/svgs/calendar.svg');
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+@import "src/assets/scss/stylesConfig.scss";
+
+.engagement-settings {
+    padding: 0 0 64px;
+    &__header {
+        padding-top: 24px;
+        & h1.ui.header {
+            font-size: 32px;
+            color: $text_header;
+            font-weight: 300;
+            font-family: $default_fontFamily;
+        }
+    }
+
+    .content-wrapper {
+        max-width: 605px;
+        margin: 50px auto;
+        .wrapper-button {
+          .primary-btn.ui.button {
+            font-size: 14px;
+            line-height: 24px;
+            margin: 0;
+            padding: 0 24px;
+          }
+        }
+    }
+
+    .general-information {
+        &__wrapper {
+            margin: 24px auto;
+            max-width: 820px;
+        }
+        &__title {
+            padding: 21px 92px;
+
+            & h3.ui.header {
+                margin-bottom: 10px;
+            }
+            & h4.ui.header {
+                font-size: 14px;
+                font-weight: 400;
+                color: $primary_card_header;
+            }
+        }
+        &__content {
+            font-size: 14px;
+            font-weight: 400;
+
+            & h4.ui.header {
+                font-weight: 400;
+                font-size: 18px;
+                font-family: $default_fontFamily;
+            }
+
+            .content-wrapper > div {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .settings-form {
+        &__wrapper {
+            margin: 100px auto 0;
+            max-width: 820px;
+        }
+        &__header {
+            padding: 21px 92px;
+
+            & h3.ui.header {
+                margin-bottom: 10px;
+            }
+            & h4.ui.header {
+                font-size: 14px;
+                font-weight: 400;
+                color: $primary_card_header;
+            }
+        }
+        &__content {
+            & h4.ui.header {
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+        &__input {
+            margin-bottom: 25px;
+            label {
+                display: block;
+                margin-bottom: 20px;
+                font-size: 18px;
+                font-weight: 400;
+            }
+            .input,
+            .dropdown {
+                width: 100%;
+                input,
+                .text {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $shuttle_grey;
+                }
+                &.visible {
+                    input,
+                    .text {
+                        color: $black;
+                    }
+                    .item:hover {
+                      .text {
+                          color: $white;
+                      }
+                    }
+                }
+            }
+        }
+        &--input-width-70 {
+            width: 70%;
+        }
+        &__title {
+            margin-bottom: 34px !important;
+        }
+    }
+
+    .enable-matching-feature-box {
+        > label {
+            font-size: 14px;
+            display: block;
+            line-height: 24px;
+            font-weight:  600;
+            color:  $black;
+            margin-bottom: 10px;
+        }
+        .checkbox {
+            margin-bottom: 30px;
+        }
+        .ui.toggle.checkbox {
+            input~label::after {
+                left: 3px;
+            }
+            input:checked~label::after {
+                left: calc(100% - 21px);
+            }
+            input:checked~label::before {
+                background-color: $light_green !important;
+            }
+            label {
+                height: 24px;
+                width: 50px;
+                background: linear-gradient(0deg, rgba($black, 0.54), rgba($black, 0.54)), $white;
+                border-radius: 100px;
+                &::before{
+                    height: 24px;
+                    width: 50px;
+                }
+                &::after {
+                    background: $white;
+                    height: 18px;
+                    width: 18px;
+                    top: 3px;
+                }
+            }
+        }
+    }
+}

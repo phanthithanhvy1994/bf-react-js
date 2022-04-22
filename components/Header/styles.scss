@@ -1,0 +1,11 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.wrapper-header {
+  & h4.ui.header,
+  & h5.ui.header {
+    font-weight: normal;
+    font-style: normal;
+    font-family: $default_fontFamily;
+    color: $text_body;
+  }
+}

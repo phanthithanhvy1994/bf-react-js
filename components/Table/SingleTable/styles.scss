@@ -1,0 +1,93 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.primary-table {
+  .ui.table.selectable {
+    border: none;
+    border-right: 1px solid $celeste;
+    thead {
+      th {
+        background: $chathams_blue;
+        color: $white;
+        border-left: none;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        font-family: $default_fontFamily;
+        line-height: 24px;
+      }
+      tr:first-child>th:first-child,
+      tr:first-child>th:last-child {
+        border-radius: 0;
+      }
+    }
+    tbody {
+      & tr {
+        &:last-child {
+          & td {
+            border-bottom: 1px solid $celeste;
+          }
+        }
+        &.tr-row__expanded {
+          border-top: 0;
+          &:hover {
+            background: none !important;
+          }
+          tr:last-child {
+            td {
+              border-bottom: 0;
+            }
+          }
+          tr {
+            border-top: 1px solid $childrow_table_boxshadow;
+          }
+          td {
+            text-align: left;
+          }
+          .group-td__collap {
+            display: block;
+            padding: 0;
+            border: none;
+          }
+        }
+      }
+      & td {
+        font-family: $default_fontFamily;
+        font-style: normal;
+        font-weight: normal;
+        color: $blue;
+        border-top: 1px solid $celeste;
+        font-size: 14px;
+        line-height: 24px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        &.rowClicked {
+          cursor: pointer;
+        }
+        &.radio {
+          min-height: 16px;
+        }
+        &:first-child {
+          border-left: 1px solid $celeste;
+        }
+        &.row-expanded {
+          border-top: 0;
+          border-bottom: 0;
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+        & .chevron.right,
+        & .chevron.down {
+          cursor: pointer;
+        }
+        & .chevron.right{
+          width: 7px;
+          height: 14px;
+        }
+        & .chevron.down{
+          width: 14px;
+          height: 7px;
+        }
+      }
+    }
+  }
+}

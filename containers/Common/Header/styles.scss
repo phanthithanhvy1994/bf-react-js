@@ -1,0 +1,116 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.tabular.menu .item {
+    border-top: 0px;
+}
+
+.header-bf{
+    position: relative;
+    width: 100%;
+    background-color: $header_bgColor;
+    color:$header_color;
+    height: $header_height;
+    vertical-align: middle;
+    box-shadow: $header_boxShadow;
+    & .ui.container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: auto !important;
+        margin-left: 26px !important;
+        margin-right: 14px !important;
+    }
+    &__menu{
+        border-bottom: 0px !important;
+    }
+    &__logo-Project Name{
+        height: 28px;
+    }
+    &__item-engagement{
+        padding-right: 0px !important;
+        font-size: 16px;
+        font-family: $default_fontFamily;
+    }
+    &__item-icon{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    &__question-mask{
+        width: 22px;
+        height: 22px;
+        display:block;
+        background: url("src/assets/images/icon/question_mark.png") no-repeat;
+        &:hover {
+            background: url("src/assets/images/icon/question_mark_hover.png") no-repeat;
+            cursor: pointer;
+        }
+    }
+    & .menu.transition.visible{
+        border:0px !important;
+    }
+}
+
+.ui.equal.width.grid{
+    height: 100%;
+}
+
+@media only screen and (max-width: $min_width_tablet){
+    .header-bf{
+        min-width: $min_width_tablet;
+        &__item-logo{
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+        &__item-profile{
+            padding-right: 0px !important;
+        }
+        &__item-engagement{
+            padding-left: 0px !important;
+        }
+        &__logo-Project Name{
+            height: 22px;
+        }
+        &__item-devider{
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+  
+    .menu-user-profile{
+        & .ui.pointing.dropdown.link.item{
+            padding-right: 0px;
+            margin-right: 0px;
+        } 
+    }
+}
+
+@media only screen and (min-width: $min_width_tablet) and (max-width: $max_width_tablet){
+    .header-bf{
+        &__item-logo{
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+        &__item-profile{
+            padding-right: 0px !important;
+        }
+        &__item-engagement{
+            padding-left: 0px !important;
+        }
+        &__logo-Project Name{
+            height: 22px;
+        }
+        &__item-devider{
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+        }
+    }
+  
+    .menu-user-profile{
+        & .ui.pointing.dropdown.link.item{
+            padding-right: 0px;
+            margin-right: 0px;
+        } 
+    }
+
+}

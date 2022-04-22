@@ -1,0 +1,113 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.pointing.dropdown.link.item.menu-user-profile {
+  height: $header_height;
+  margin-left: 0px;
+  padding-left: 11px;
+  border: 0;
+}
+
+.ui.pointing.dropdown.link.item.menu-engagement-setting {
+  height: $header_height;
+  padding-right: 0px;
+  margin-right: 0px;
+  border: 0;
+  & .text {
+    max-width: 500px;
+    line-height: initial;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.header-bf {
+  & .ui.secondary.inverted.menu {
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    font-family: $default_fontFamily;
+    & .ui.pointing.dropdown.link.item {
+      color: $default_color !important;
+      font-weight: normal;
+      font-size: 16px;
+    }
+    & .active.item {
+      color: $default_color !important;
+      font-weight: normal;
+      font-size: 16px;
+    }
+    & .dropdown.item .menu {
+      background: $secondary_color;
+      box-shadow: $dropdownMenu_boxShadow;
+      border: 0;
+      margin-top: 0px;
+      width: 180px;
+      min-width: 180px;
+      z-index: 1901;
+    }
+    & .ui.dropdown {
+      & .menu > .item,
+      .item.active {
+        border: 0;
+        border-radius: 2px;
+        border-bottom: 1px solid $very_light_grey;
+        padding: 20px 16px 22px 16px !important;
+        font-size: 13px !important;
+        font-weight: normal !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        &:hover {
+          background: $dropdown_item_bg_hover !important;
+          color: $dropdown_item_color_hover !important;
+          font-weight: normal !important;
+          & a {
+            background: $dropdown_item_bg_hover !important;
+            color: $dropdown_item_color_hover !important;
+          }
+        }
+        &.disabled {
+          border-bottom: none;
+          padding: 11px 0px 8px 16px !important;
+          font-size: 10px !important;
+        }
+      }
+    }
+  }
+  .ui.pointing.dropdown > .menu::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10.5px 14px 10.5px;
+    border-color: transparent transparent $secondary_color transparent;
+    position: absolute;
+    top: -14px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.headerdd {
+  &__icon-profile {
+    margin-top: 24px;
+    height: 19px;
+  }
+  & .ui.menu .ui.dropdown .menu>.item {
+    line-height: 19.07px;
+    color: $default_color !important;
+  }
+}
+
+@media only screen and (max-width: $min_width_tablet) {
+  .ui.pointing.dropdown.link.item.menu-engagement-setting {
+    & .text {
+      max-width: 130px;
+    }
+  }
+}

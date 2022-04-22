@@ -1,0 +1,19 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.wrapper-radio{
+  .ui.radio.checkbox{
+    .box:before, label:before{
+      border-color: $blue;
+    }
+    input:focus:checked~.box:before, input:focus:checked~label:before,
+    input:checked~.box:before, input:checked~label:before{
+      background-color: $blue;
+    }
+    .box:after, label:after,
+    input:checked~.box:after, input:checked~label:after,
+    input:focus~.box:after,  input:focus~label:after{
+      background-color: $white;
+      color: $white;
+    }
+  }
+}

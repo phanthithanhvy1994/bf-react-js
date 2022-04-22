@@ -1,0 +1,242 @@
+@import "src/assets/scss/stylesConfig.scss";
+
+.authorized-institutions {    
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 85vh;
+
+  &__header {
+    height: 71px;
+    display: inline-block;
+    width: 100%;
+  }
+  
+  &__title {
+    width: 388px;
+    padding: 6px 0px 27px 0px;
+    display: inline-block;
+    & h1.ui.header {
+      height: 38px;
+      font-size: 30px;
+      color: $faux_steel_blue;
+      font-weight: 300;
+      font-family: $default_fontFamily;
+      font-style: normal;
+      line-height: 41px;
+    }
+  }
+
+  &__button {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 18px 0px 13px 0px;
+    float: right;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    .primary-btn {
+      &.btn--viewDetails {
+        margin: 0px;
+        padding: 8px 28.5px;
+      }
+      &.btn--reAuthenticate {
+        margin-right: 16px;
+        padding: 8px 16px;
+        background: $white;
+        border: 1px solid $blue;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: $blue;
+      }
+      &.disabled.btn--reAuthenticate {
+        background: $white;
+        border: 1px solid $btn_disabled;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: $btn_disabled;
+        margin-right: 16px;
+      }
+      &.btn--viewDetails {
+        margin: 0px;
+        font-size: 14px;
+        line-height: 24px;
+        padding: 8px 28.5px;
+      }
+    }
+  }
+
+  &__modal {
+    &.ui.tiny.modal.error-modal {
+      width: 419px;
+      padding: 46px 30px 42px 40px;
+      .header {
+        font-family: $default_fontFamily;
+        padding: 0;
+        margin-bottom: 24px;
+      }
+    
+      >.content {
+        padding: 0;
+        margin-bottom: 24px;
+      }
+    
+      >.actions {
+        padding: 0;
+        .button {
+          padding: 7px 24px;
+          font-family: $default_fontFamily;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  &__page--dimmer {
+    &.ui.page.dimmer.active {  
+      background-color: $modal_boxshadow;
+    }
+  }
+
+  .empty-institution {
+    margin-top: 100px;
+  }
+
+  .div--centered {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  > .wrapper-container {
+    margin-top: 22px
+  }
+
+  .content-wrapper {
+    max-width: 605px;
+    margin: 50px auto;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    > .ui.container {
+      > .ui.grid {
+        width: 1128px;
+        min-height: 88vh;
+        margin-right: 0;
+        margin-left: 0;
+        .column {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+    } 
+  }
+}
+
+.ui.modal.confirm-modal {
+  &.warning-message-team-member {
+    max-width: 500px;
+    height: 291px;
+    .header {
+      font-family: $default_fontFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: $black;
+    }
+    .content {
+      font-family: $default_fontFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+      padding-bottom: 0;
+    }
+    .actions {
+      position: absolute;
+      bottom: 40px;
+      right: 361px;
+      top: 211px;
+      left: 50px;
+      .ui.button {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        margin-right: 0;
+        padding: 6px 24px 10px 24px;
+        background: $white;
+        border: 1px solid $blue;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: $blue;
+      }
+    }
+  }
+  &.warning-message-re-authenticate {
+    max-width: 500px;
+    padding-bottom: 34px;
+    .header {
+      font-family: $default_fontFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: $black;
+    }
+    .content {
+      font-family: $default_fontFamily;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $black;
+      padding-bottom: 0;
+      ul {
+        padding: 35px 20px;
+        margin: 0;
+        li::marker {
+          color: $black;
+          font-size: 0.7em;
+        }
+      }
+    }
+    .actions {
+      justify-content:unset;
+      .ui.button {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        margin-right: 0;
+        padding: 6px 24px 10px 24px;
+        background: $white;
+        border: 1px solid $blue;
+        box-sizing: border-box;
+        border-radius: 4px;
+        color: $blue;
+        &.btn--closed {
+          width: 104px;
+          height: 40px;
+          padding: 6px 24px;
+        }
+        &.btn--confirmed {
+          width: 83px;
+          height: 40px;
+          padding: 8px 30px;
+          margin-left: 24px;
+          background: $blue;
+          color: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.dropzone {
+  height: 364px;
+  text-align: center;
+  background: $grey;
+  border: 1px dashed $blue;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+
+  &__content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    .wrapper-image>img {
+      margin: auto;
+    }
+
+    &__uploaded {
+      font-style: normal;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.4px;
+      color: $black;
+      margin-top: 16px;
+      height: 55px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__descriptions {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: $black;
+    margin-top: 16px;
+
+    span {
+      color: $blue;
+    }
+
+    &.dropzone-uploading {
+      font-weight: normal;
+      color: $celeste;
+
+      span {
+        color: $celeste;
+      }
+    }
+  }
+}

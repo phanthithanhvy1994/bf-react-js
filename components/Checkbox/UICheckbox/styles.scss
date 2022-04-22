@@ -1,0 +1,43 @@
+@import 'src/assets/scss/stylesConfig.scss';
+
+.ui.checkbox{
+  vertical-align: middle;
+  .box:before,
+  label::before {
+    background: $white;
+    border-color: $blue;
+    width: 16px;
+    height: 16px;
+    border-radius: 0;
+  }
+
+  input:focus~.box:before,
+  input:focus~label:before,
+  .box:hover::before,
+  label:hover::before,
+  input:checked:focus~.box:before,
+  input:checked:focus~label:before,
+  input:checked~.box:before,
+  input:checked~label:before{
+    border-color: $blue;
+  }
+
+  input:checked:focus~.box:before,
+  input:checked:focus~label:before,
+  input:checked~.box:before,
+  input:checked~label:before{
+    background: $blue;
+  }
+
+  input:checked~.box:after,
+  input:checked~label:after,
+  input:checked:focus~.box:after,
+  input:checked:focus~label:after{
+    color: $white;
+    font-size: 10px;
+    background: url(src/assets/Images/icon/basic_tick.png) no-repeat center;
+    content: '';
+    width: 16px;
+    height: 16px;
+  }
+}
